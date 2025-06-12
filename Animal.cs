@@ -4,6 +4,16 @@ namespace PolyExample32
 {
     internal class Animal
     {
+        private void Private() { }
+        protected void Protected() { }
+        public void Public() { }
+
+        public void TestA()
+        {
+            Private();  // 같은 클래스 내에서는 private 호출 가능
+            Protected();
+            Public();
+        }
         public Animal()
         {
             Age = 0;
